@@ -44,4 +44,9 @@ it('resets temperature to default 20 when clicking reset button', function(){
   expect(thermostat.degrees).toEqual(20);
 });
 
+it('informs about energy usage', function(){
+  thermostat.degree(17);
+  expect(thermostat.usage()).toEqual("low usage");
+});
+
 });

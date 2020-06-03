@@ -40,4 +40,16 @@ class Thermostat {
     this.degrees = 20
     return this.degrees
   }
+
+  usage(){
+    if (this.degrees < 18){
+      return "low usage";
+    }
+    else if (this.degrees >= 18 && this.degrees < 25){
+      return "medium usage";
+    }
+    else {
+      return "high usage";
+    }
+  }
 };
