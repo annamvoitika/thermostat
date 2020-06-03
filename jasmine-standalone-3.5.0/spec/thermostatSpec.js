@@ -39,4 +39,9 @@ it("does not increase temp beyond 32 if power saving mode is off", function(){
   expect(function(){thermostat.up(20);}).toThrow("Power saving mode is off, max temp reached");
 });
 
+it('resets temperature to default 20 when clicking reset button', function(){
+  thermostat.reset();
+  expect(thermostat.degrees).toEqual(20);
+});
+
 });

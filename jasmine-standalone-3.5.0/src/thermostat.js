@@ -35,4 +35,9 @@ class Thermostat {
   mode_status(){
     return this.mode;
   }
+
+  reset(){
+    this.degrees = 20
+    return this.degrees
+  }
 };
