@@ -1,11 +1,53 @@
+body {
+  background-color: #555b6e;
+  color: white;
+}
+
+button {
+  background-color: #89b0ae;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+h1 {
+  font-family: Oswald, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+#temperature {
+  font-size: 80px;
+  margin-bottom: -30px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+p, button {
+  font-family: Lato, Helvetica, sans-serif;
+}
+
+select {
+  background-color: #ffd6ba;
+}
+
 .low-usage {
-  color: green;
+  color: #06d6a0;
 }
 
 .medium-usage {
-  color: black;
+  color: white;
 }
 
 .high-usage {
-  color: red;
+  color: #ff6b6b;
 }
