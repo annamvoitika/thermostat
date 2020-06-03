@@ -6,7 +6,7 @@ describe("Thermostat", function() {
   });
 
 it("starts at 20 degrees", function(){
-  expect(thermostat.degree(20)).toEqual(20);
+  expect(thermostat.currentDegree(20)).toEqual(20);
 });
 
 it("increases temperature with an up function", function(){
@@ -45,12 +45,12 @@ it('resets temperature to default 20 when clicking reset button', function(){
 });
 
 it('informs about energy usage', function(){
-  thermostat.degree(17);
+  thermostat.currentDegree(17);
   expect(thermostat.usage()).toEqual("low usage");
 });
 
 it("changes the usage status", function(){
-  thermostat.degree(27);
+  thermostat.currentDegree(27);
   thermostat.usage()
   expect(thermostat.usageStatus).toEqual("high-usage");
 });

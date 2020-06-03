@@ -7,7 +7,7 @@ class Thermostat {
     this.usageStatus = "medium-usage";
   }
 
-  degree(number){
+  currentDegree(number){
     this.degrees = number
     return this.degrees;
   }
@@ -37,6 +37,14 @@ class Thermostat {
     return this.mode;
   }
 
+  mode_on(){
+    this.mode = "on";
+  }
+
+  mode_off(){
+    this.mode = "off";
+  }
+
   reset(){
     this.degrees = 20
     return this.degrees
@@ -45,15 +53,15 @@ class Thermostat {
   usage(){
     if (this.degrees < 18){
       this.usageStatus = "low-usage"
-      return "low usage";
+      return this.usageStatus;
     }
     else if (this.degrees >= 18 && this.degrees < 25){
       this.usageStatus = "medium-usage"
-      return "medium usage";
+      return this.usageStatus;
     }
     else {
       this.usageStatus = "high-usage"
-      return "high usage";
+      return this.usageStatus;
     }
   }
 };
