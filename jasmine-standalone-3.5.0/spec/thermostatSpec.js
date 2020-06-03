@@ -49,4 +49,10 @@ it('informs about energy usage', function(){
   expect(thermostat.usage()).toEqual("low usage");
 });
 
+it("changes the usage status", function(){
+  thermostat.degree(27);
+  thermostat.usage()
+  expect(thermostat.usageStatus).toEqual("high-usage");
+});
+
 });

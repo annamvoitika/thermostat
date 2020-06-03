@@ -4,6 +4,7 @@ class Thermostat {
     this.mode = "on";
     this.max_power_saving_mode_on = 25;
     this.max_power_saving_mode_off = 32;
+    this.usageStatus = "medium-usage";
   }
 
   degree(number){
@@ -43,12 +44,15 @@ class Thermostat {
 
   usage(){
     if (this.degrees < 18){
+      this.usageStatus = "low-usage"
       return "low usage";
     }
     else if (this.degrees >= 18 && this.degrees < 25){
+      this.usageStatus = "medium-usage"
       return "medium usage";
     }
     else {
+      this.usageStatus = "high-usage"
       return "high usage";
     }
   }
