@@ -47,7 +47,7 @@ class Thermostat {
 
   reset(){
     this.degrees = 20
-    return this.degrees
+    return this.degrees;
   }
 
   usage(){
